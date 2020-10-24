@@ -20,7 +20,7 @@ app.get('/register', (req, res)=> {
 })
 
 app.post('/register', urlencodedParser, [
-    check('username', 'This username must me 3+ characters long')
+    check('username', 'This username must be 3+ characters long')
         .exists()
         .isLength({ min: 3 }),
     check('email', 'Email is not valid')
